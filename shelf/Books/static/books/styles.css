@@ -3,7 +3,7 @@ h1 {
 }
 
 nav {
-    display: flex;
+    display: block;
     background-color: blueviolet;
     
 }

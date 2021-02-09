@@ -9,3 +9,6 @@ def title(request, title):
     return render(request, "books/title.html" , {
         "title": title
     })
+
+def add(request):
+    return render(request, 'books/add.html')
