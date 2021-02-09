@@ -1,7 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-    <title>Books</title>
-    <body>
-        <h1>Hello Books</h1>
-    </body>
-</html>
+{% extends "books/layout.html" %}
+
+{% block body %}{% load static %}
+    <main>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Search Books</li>
+                <li>About</li>
+            </ul>
+        </nav>
+        <h1>Hello Bookshelf</h1>
+    </main>
+{% endblock %}

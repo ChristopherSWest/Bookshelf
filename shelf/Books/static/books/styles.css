@@ -1,0 +1,17 @@
+h1 {
+    color: blue;
+}
+
+nav {
+    display: flex;
+    background-color: blueviolet;
+    
+}
+
+nav ul li {
+    display: flex;
+    border: 3px solid black;
+    padding-top: 5px;
+    background-color: aqua;
+    list-style-type: none;
+}
