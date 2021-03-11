@@ -1,14 +1,14 @@
 {% extends "books/layout.html" %}
 
+{% block nav %}{% load static %}
+{% if user.is_authenticated %}
+<li>Hey {{ user.username }}</li>
+<li><a href="{% url 'logout' %}">Log Out</a></li>
+{% else %}
+<li><a href="{% url 'login' %}">Log In</a></li>
+{% endif %}
+{% endblock %}
+
 {% block body %}{% load static %}
-    <main>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Search Books</li>
-                <li>About</li>
-            </ul>
-        </nav>
-        <h1>Hello Bookshelf</h1>
-    </main>
+    
 {% endblock %}

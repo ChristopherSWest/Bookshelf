@@ -12,6 +12,16 @@
         <link rel="stylesheet" href="{% static 'books/styles.css' %}">
     </head>
     <body>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Search Books</li>
+                <li>About</li>
+                {% block nav %}
+        
+                {% endblock %}
+            </ul>
+        </nav>
         {% block body %}
         {% endblock %}
 
