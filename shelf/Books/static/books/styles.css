@@ -2,16 +2,32 @@ h1 {
     color: blue;
 }
 
-nav {
+nav ul {
     display: flex;
+    flex-direction: row;
     background-color: blueviolet;
-    
+    padding: 20px;
 }
 
 nav ul li {
-    display: flex;
+    flex-grow: 1;
     border: 3px solid black;
-    padding-top: 5px;
+    padding: 5px;
     background-color: aqua;
     list-style-type: none;
+    text-align: center;
 }
+
+#book_details {
+    display: flex;
+    flex-direction: row;
+    padding: 15px; 
+}
+
+#book_details ul li {
+    list-style-type: none;
+    font-size: large;
+}
+
+
+

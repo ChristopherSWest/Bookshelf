@@ -14,12 +14,16 @@
     <body>
         <nav>
             <ul>
-                <li>Home</li>
+                <li><a href="{% url 'books:index' %}">Home</a></li>
                 <li>Search Books</li>
                 <li>About</li>
-                {% block nav %}
-        
-                {% endblock %}
+                <li><a href="{% url 'books:add' %}">Add Books</a></li>
+                {% if user.is_authenticated %}
+                <li>Hey {{ user.username }}</li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Log In</a></li>
+                {% endif %}
             </ul>
         </nav>
         {% block body %}

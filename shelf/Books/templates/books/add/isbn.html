@@ -7,6 +7,11 @@
         {{ form }}
         <input type="submit" value="search">
     </form>
-    
-
+    <div id="book_details">
+        <img src="{{ book.cover }}" >
+        <ul>
+            <li>Title: {{ book.title }}</li>
+            <li>Author: {{ book.authors }}</li>
+        </ul>
+    </div>
 {% endblock %}
