@@ -8,10 +8,36 @@
         <input type="submit" value="search">
     </form>
     <div id="book_details">
-        <img src="{{ book.cover }}" >
+        {% if book.cover %}
+        
+            <ul>
+                <li><img src="{{ book.cover }}" ></li>                
+
+            </ul>
+        
+        {% else %}
+        <div id="cover">
+            <ul>        
+                <li>{{ book.title }}</li>
+                <li>By {{ book.authors }}</li>
+                
+            </ul>
+        </div>
+        {% endif %}
         <ul>
             <li>Title: {{ book.title }}</li>
             <li>Author: {{ book.authors }}</li>
+            <li>Publisher: {{ book.publisher }}</li>
+            <li>Published: {{ book.published_date }}</li>
+            <li>Number of Pages: {{ book.number_of_pages }}</li>
+            
         </ul>
     </div>
+    {% if user.is_authenticated %}
+    <form action="{% url 'books:add_success' book.isbn user%}">
+        <input type="submit" name="add_book_button" value="add to my books">
+    </form>
+   
+    
+    {% endif %}
 {% endblock %}

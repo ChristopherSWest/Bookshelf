@@ -1,0 +1,13 @@
+{% extends 'books/layout.html' %}
+
+{% block body %}
+    <h1>Add a new Book</h1>
+    <form action="{% url 'books:add' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="search">
+    
+    {% if user.is_authenticated %}
+    <h3>Successfully Added {{ book.title }}</h3>
+    {% endif %}
+{% endblock %}

@@ -2,5 +2,27 @@
 
 
 {% block body %}{% load static %}
+{% if user.is_authenticated %}
+<h3>Welcome {{ user }}!</h3>
+{% else %}
+<h3>Log in to view your books!</h3>
+{% endif %}
+<div id="all_books">
+{% for book in all_books %}
+
+{% if book.cover_url %}
+        <img src="{{ book.cover_url }}" >
+
+            
+        
+        {% else %}
+                <div id="cover">
+                {{ book.title }}
+                By {{ book.authors }}
+                </div>
+            
+        {% endif %}
     
+{% endfor %}
+</div>
 {% endblock %}

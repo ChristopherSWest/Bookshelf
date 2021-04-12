@@ -29,5 +29,34 @@ nav ul li {
     font-size: large;
 }
 
+#cover{
+    flex-wrap: wrap;
+    text-align: center;
+    width: 180px;
+    background-color: grey;
+    height: 250px;
+    padding: 10px;
+}
+#cover ul{
+    text-align: center;
+    padding: 10px;
+    border: solid white;
+}
+#cover ul li {
+    flex-direction: column;
+    list-style-type: none;
+    font-size: x-large;
+    flex-grow: 3;
+    padding: 10px;    
+}
+
+#all_books {
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+
+
 
 

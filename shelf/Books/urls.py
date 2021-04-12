@@ -7,5 +7,7 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("b/<str:title>", views.title, name="title"),
     path("add", views.add, name="add"),
-    path("add/<str:isbn>", views.add_title, name="add_title")
+    path("add/<str:isbn>", views.add_title, name="add_title"),
+    path("add/<str:isbn>/<str:user>/success", views.add_success, name="add_success"),
+    
 ]
