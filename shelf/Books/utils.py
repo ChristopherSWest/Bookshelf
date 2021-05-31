@@ -73,7 +73,8 @@ def add_book(book,user):
 
 # function to list all of the user's books
 def show_my_books(user):
-    my_books = models.Book.objects.filter(owner=user.id)
+    user_object = User.objects.get(username=user)
+    my_books = models.Book.objects.filter(owner=user_object.id)
     return my_books
 
 #function to show all of the books in the database

@@ -15,7 +15,7 @@
         <nav>
             <ul>
                 <li><a href="{% url 'books:index' %}">Home</a></li>
-                <li>Search Books</li>
+                <li><a href="{% url 'books:my_books' user %}">My Books</a></li>
                 <li>About</li>
                 <li><a href="{% url 'books:add' %}">Add Books</a></li>
                 {% if user.is_authenticated %}

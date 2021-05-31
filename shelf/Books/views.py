@@ -73,3 +73,8 @@ def add_success(request, isbn, user):
         "book": book,
         "add_book": utils.add_book(book, user)
     })
+
+def my_books(request, user):
+    return render(request, 'books/my_books.html', {
+        "my_books": utils.show_my_books(user)
+    })

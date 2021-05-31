@@ -8,17 +8,17 @@
 <h3>Log in to view your books!</h3>
 {% endif %}
 <div id="all_books">
-{% for book in all_books %}
+{% for book in my_books %}
 
 {% if book.cover_url %}
-        <a href="{% url 'books:add_title' book.isbn %}"><img src="{{ book.cover_url }}" ></a>
+    <a href="{% url 'books:add_title' book.isbn %}"><img src="{{ book.cover_url }}" ></a>
 
             
         
         {% else %}
                 <div id="cover">
-                        <a href="{% url 'books:add_title' book.isbn %}">{{ book.title }}</a>
-                By {{ book.author }}
+                    <a href="{% url 'books:add_title' book.isbn %}">{{ book.title }}</a>
+                By {{ book.authors }}
                 </div>
             
         {% endif %}

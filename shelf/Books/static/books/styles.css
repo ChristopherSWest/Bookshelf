@@ -53,9 +53,16 @@ nav ul li {
 #all_books {
     display: flex;
     flex-flow: row wrap;
-    
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+#blur {
+    background-size: 500px 300px;
+    background-repeat: no-repeat;
+    background-image: var(--b);
+    )
+}
 
 
 

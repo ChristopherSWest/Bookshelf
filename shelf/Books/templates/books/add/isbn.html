@@ -8,8 +8,9 @@
         <input type="submit" value="search">
     </form>
     <div id="book_details">
+        <div id="blur" style="--b: url({{ book.cover }})">    
         {% if book.cover %}
-        
+            
             <ul>
                 <li><img src="{{ book.cover }}" ></li>                
 
@@ -24,6 +25,7 @@
             </ul>
         </div>
         {% endif %}
+    
         <ul>
             <li>Title: {{ book.title }}</li>
             <li>Author: {{ book.authors }}</li>
@@ -33,6 +35,7 @@
             
         </ul>
     </div>
+</div>
     {% if user.is_authenticated %}
     <form action="{% url 'books:add_success' book.isbn user%}">
         <input type="submit" name="add_book_button" value="add to my books">
